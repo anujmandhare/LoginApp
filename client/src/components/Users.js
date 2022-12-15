@@ -25,6 +25,7 @@ const Login = () => {
             {
                 <ul>
                     {response.map(el => <li>{el.username}:{el.password}</li>)}
+                    <Input />
                 </ul>
             }
         </>
