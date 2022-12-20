@@ -1,13 +1,17 @@
 const express = require('express');
 const app = express();
-const users = require('./routes/users');
 const cors = require('cors');
 
-const PORT = 8080;
+const users = require('./routes/users');
+const { connect } = require('./DatabaseFiles/dbConnection');
+const { PORT } = require('./constants');
 
+connect();
+
+app.use(express.json())
 app.use(cors());
-app.use('/api/users', users)
-app.get('/api',(req,res) => res.send('Hello from server'));
+app.get('/test', (req, res) => res.send('Hello from server'));
+app.use('/data', users);
 
 app.listen(PORT);
 console.log('http://localhost:8080/');
