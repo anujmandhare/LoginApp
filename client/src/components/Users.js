@@ -3,10 +3,10 @@ import { postRequest, getRequest } from "./Api";
 
 const CustomInput = ({ data }) => {
     const { id, value, setter, type, labelData } = data;
-
+    const isDesc = id==='description';
     return (<div className="mb-3 row">
         <div className="col-sm-2x"></div>
-        <label className="col-sm-2 col-form-label" required htmlFor={id} >{labelData}</label>
+        <label className="col-sm-2 col-form-label" required htmlFor={id} >{labelData}{isDesc?null:<span>*</span>}</label>
         <div className="col-sm-4">
             {id !== 'description' ? <input className="form-control" id={id} required value={value} type={type} onChange={(val, d) => {
                 setter(val.target.value)
@@ -97,12 +97,12 @@ const Login = () => {
                     <li key='description' className="col-sm-5 border">Personal Description</li>
                 </ul>
                     {response.map((el, index) => {
-                        return (<ul key={'data' + index} className="row">
+                        return (<><ul key={'data' + index} className="row">
                             <li key={'username' + index} className="col-sm-2 border">{el.username}</li>
                             <li key={'email' + index} className="col-sm-3 border">{el.email}</li>
                             <li key={'dob' + index} className="col-sm-2 border">{el.dob}</li>
                             <li key={'description' + index} className="col-sm-5 border">{el.description}</li>
-                        </ul>)
+                        </ul></>)
                     })}
                 </>
                 : null}

@@ -16,6 +16,10 @@ li{
   list-style-type:none;
 }
 
+span {
+color: red;
+}
+
 .form {
   margin-top: 20px;
 }
