@@ -21,7 +21,7 @@ Designed a Login application for the web using React, MongoDB, Express and Node.
 3. ReactJS
     You will need to install ReactJS in the project which can be done by running this command `npm install -g create-react-app`.
 4. MongoDB
-    You will need to configure your mongodb server which can be done by 
+    You will need to configure your Mongodb server which can be done by 
     1. Setup cluster using this below link
     https://www.section.io/engineering-education/nodejs-mongoosejs-mongodb/
     2. Give your URI to Constans.js URI field. And rest the system will take care of.
