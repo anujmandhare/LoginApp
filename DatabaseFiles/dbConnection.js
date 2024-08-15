@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb');
 
-const uri = "mongodb+srv://student:student@cluster0.s7tgpof.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://asd:asd@cluster0.s7tgpof.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(uri);
 
 async function connect() {
@@ -9,7 +9,7 @@ async function connect() {
         db = await client.db("MainDatabase");
         console.log('Database connection successfull');
     } catch (error) {
-        console.error(e);
+        console.error(error);
     }
 }
 
@@ -23,7 +23,7 @@ const submitForm = (payload) => {
 
 const getAllData = async () => {
     const arr = [];
-    await db.collection('UserData').find({ "_id": { $ne: null } }).forEach(el=>arr.push(el));
+    await db.collection('UserData').find({ "_id": { $ne: null } }).forEach(el => arr.push(el));
     return arr;
 }
 
