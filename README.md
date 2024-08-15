@@ -17,7 +17,7 @@ Designed a Login application for the web using React, MongoDB, Express and Node.
     For running the project the most important software required is Node.js, this can be downloaded
     from this link `https://nodejs.org/en/download/`. NodeJS should be installed and configured in the system.
 2. ExpressJS
-    You will need to install ExpressJS in the project which can be done by runing this command `npm install -g express`
+    You will need to install ExpressJS in the project which can be done by running this command `npm install -g express`
 3. ReactJS
     You will need to install ReactJS in the project which can be done by runing this command `npm install -g create-react-app`.
 4. MongoDB
