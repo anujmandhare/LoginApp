@@ -7,7 +7,7 @@ async function connect() {
     try {
         await client.connect();
         db = await client.db("MainDatabase");
-        console.log('Database connection successfull');
+        console.log('Database connection successful');
     } catch (error) {
         console.error(error);
     }
