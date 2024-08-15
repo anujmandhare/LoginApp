@@ -1,6 +1,6 @@
 # Description
 
-Designed a Login application for web using React, MongoDB, Express and Node.
+Designed a Login application for the web using React, MongoDB, Express and Node.
 
 
 # Technologies used 
